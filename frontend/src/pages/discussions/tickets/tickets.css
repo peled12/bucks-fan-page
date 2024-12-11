@@ -1,0 +1,381 @@
+.tickets-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  width: 90vw;
+  position: relative;
+  left: 5vw;
+  font-family: Georgia, serif;
+}
+
+.tickets-container .no-tickets-msg {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #0b2102;
+  margin-bottom: 0;
+}
+
+.tickets-container > .all-tickets-title {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.tickets-container > .all-tickets-title > h1 {
+  margin-bottom: 6.5vh;
+  color: #0d2a02;
+  border-bottom: 1px solid #061401;
+  width: max-content;
+  padding: 0 25px;
+}
+
+.tickets-container > .ticket {
+  position: relative;
+  display: flex;
+  height: 22vh;
+  background-color: #e8e8e8;
+  padding: 20px;
+  border-radius: 6px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom: 1px solid rgb(2, 37, 11);
+  width: 100%;
+  margin: 0;
+  transition: 0.3s ease;
+}
+
+.tickets-container > .ticket.not-mine {
+  cursor: pointer;
+}
+
+.tickets-container > .ticket.even {
+  background-color: #dcdcdc;
+}
+
+.tickets-container > .ticket:hover {
+  background-color: #ccc;
+}
+
+.tickets-container > .ticket > img {
+  width: 20%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.tickets-container > .ticket > div {
+  margin: 0;
+}
+
+.tickets-container > .ticket > .info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 2%;
+  height: 100%;
+  width: 20%;
+}
+
+.tickets-container > .ticket > .info-container > p {
+  margin: 0;
+  white-space: nowrap;
+}
+
+.tickets-container > .ticket .post-date {
+  position: absolute;
+  right: 1%;
+  bottom: 4%;
+  font-style: italic;
+  font-family: "Arial Narrow", Arial, sans-serif;
+  font-weight: 600;
+  opacity: 0.75;
+  margin: 0;
+  display: flex;
+  align-items: end;
+  gap: 30px;
+  white-space: nowrap;
+}
+
+.tickets-container > .ticket .post-date > p {
+  margin: 0;
+}
+
+.tickets-container > .ticket .seat-info {
+  width: 45%;
+  min-width: 0;
+  word-break: break-all;
+  display: flex;
+  gap: 5px;
+}
+
+.tickets-container > .ticket .seat-info .name {
+  white-space: nowrap;
+}
+
+.tickets-container > .ticket .seat-location {
+  position: absolute;
+  right: 2%;
+  top: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: grid;
+  width: 25%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+}
+
+.tickets-container > .ticket .seat-location > p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tickets-container > .ticket .seat-location > .title {
+  color: #103204;
+  font-weight: 600;
+}
+
+.sell-tickets-page .all-upload-container {
+  height: 100%;
+  margin: 0;
+  margin-left: 10vw;
+}
+
+.sell-tickets-page .all-upload-container > .upload-container {
+  margin: 0;
+}
+
+.sell-tickets-page .ticket-details-title {
+  margin-top: calc(60px + 3vh);
+  margin-bottom: 3vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sell-tickets-page .ticket-details-title.location {
+  margin-top: 0;
+  margin-bottom: 5vh;
+}
+
+.sell-tickets-page .ticket-details-title.date {
+  margin-top: 3vh;
+}
+
+.sell-tickets-page .ticket-details-title > h1 {
+  color: #0d2a02;
+  border-bottom: 1px solid #061401;
+  width: max-content;
+  padding: 0 25px;
+  font-family: "Ziggurat A", "Ziggurat B", Georgia, serif;
+}
+
+.sell-tickets-page .first-wrapper {
+  position: relative;
+  left: 23vw;
+  display: flex;
+  align-items: center;
+  height: 35vh;
+}
+
+.sell-tickets-page .first-wrapper .inputs-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+  margin: 0;
+}
+
+.sell-tickets-page .first-wrapper .inputs-container > input {
+  border: none;
+  border-bottom: 1px solid #0d2a02;
+  padding: 5px 10px;
+  padding-bottom: 0;
+  outline: none;
+  width: 15vw;
+  font-weight: 600;
+  border-radius: 3px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  transition: 0.3s ease;
+}
+
+.sell-tickets-page .first-wrapper .inputs-container > input:focus {
+  background-color: #e8e8e8;
+}
+
+.sell-tickets-page .first-wrapper .seat-sell-img {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  margin: 0;
+}
+
+.sell-tickets-page .first-wrapper .remove-btn {
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 3px;
+  font-weight: 600;
+  border: 1px solid #013101;
+  color: #012701;
+  transition: 0.6s ease;
+  white-space: nowrap;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  translate: 0 -50%;
+}
+
+.sell-tickets-page .first-wrapper .remove-btn:hover {
+  color: white;
+}
+
+.sell-tickets-page .second-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 7vh;
+}
+
+.sell-tickets-page .second-wrapper .date-selection {
+  width: 50vw;
+  display: flex;
+  justify-content: space-between;
+  font-family: sans-serif;
+}
+
+.sell-tickets-page .second-wrapper .date-selection > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sell-tickets-page .second-wrapper .date-selection select {
+  display: flex;
+  font-weight: 600;
+}
+
+.sell-tickets-page .second-wrapper .post-ticket-button {
+  border: 1px solid black;
+  width: 150px;
+  height: 60px;
+  border-radius: 9px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.5s ease;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-stretch: ultra-expanded;
+  font-weight: 600;
+  margin-top: 5vh;
+  background-color: #f1f1f1;
+  color: rgb(3, 50, 10);
+}
+
+.sell-tickets-page .second-wrapper .post-ticket-button:hover {
+  background-color: rgb(1, 31, 5);
+  color: white;
+}
+
+.sell-tickets-page .ticket-location-inputs {
+  width: 20vw;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.sell-tickets-page .ticket-location-inputs > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.sell-tickets-page .ticket-location-inputs > div > p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 600;
+}
+
+.sell-tickets-page .ticket-location-inputs input {
+  width: 2vw;
+  min-width: 35px;
+  height: 2vh;
+  border-radius: 5px;
+  text-align: center;
+  border: 2px solid #133705;
+}
+
+.sell-tickets-page .scroll-expandor {
+  opacity: 0;
+  margin-top: 1vh;
+}
+
+.sell-tickets-page .date-selection p {
+  font-weight: 600;
+}
+
+.sell-tickets-page .date-selection select {
+  text-align: center;
+  height: 4vh;
+  min-width: 0.5rem;
+  outline: none;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  color: #0b2102;
+  padding: 0 20px;
+}
+
+.sell-tickets-page .date-selection select option {
+  font-weight: 600;
+  font-family: sans-serif;
+}
+
+.tickets-container .page-expandor {
+  opacity: 0;
+  margin-top: 2vh;
+}
+
+.tickets-container .edit-ticket-btn {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 16px;
+  border: 2px solid #0c2602;
+  padding: 5px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.tickets-container .edit-ticket-btn:hover {
+  background-color: #000000;
+  color: white;
+}
+
+.tickets-container .edit-ticket-btn.delete:hover {
+  background-color: rgb(255, 10, 10);
+  color: black;
+}
+
+.avail-tickets-loader {
+  position: fixed;
+  left: 50%;
+  top: calc(160px + 15vh);
+  translate: -50%;
+  z-index: 1;
+  display: none;
+}
+
+.sell-tickets-link {
+  color: #2479e7;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: color 0.3s, background-color 0.3s;
+  cursor: pointer;
+}
+
+.sell-tickets-link:hover {
+  text-decoration: underline;
+}

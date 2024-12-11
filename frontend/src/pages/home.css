@@ -1,0 +1,914 @@
+.games-container {
+  display: flex;
+  position: absolute;
+  left: 1vw;
+  top: 0.5vh;
+  max-width: calc(90% - 250px);
+  border: 1px solid #ccc;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0;
+}
+
+.games-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.games-container:hover::-webkit-scrollbar-thumb {
+  background: rgb(130, 130, 130);
+}
+
+.games-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.games-container::-webkit-scrollbar-thumb {
+  background: rgb(215, 211, 211);
+  border-radius: 2px;
+}
+
+.games-container::-webkit-scrollbar-thumb:hover {
+  background: darkgray;
+}
+
+.games-container > * {
+  min-width: 175px;
+  max-width: 175px;
+  height: 80px;
+  border: 1px solid #ccc;
+  margin: 0;
+  position: relative;
+}
+
+.games-container *:not(.first-box, .first-box *, .loading-games) {
+  cursor: pointer;
+}
+
+.games-container > *:hover:not(.first-box, .loading-games) {
+  box-shadow: 0 -25px 25px -15px inset rgba(74, 76, 74, 0.802);
+}
+
+.games-container > .first-box {
+  padding: 0 10px;
+}
+
+.games-container select {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 7px;
+  padding: 7px 2px;
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  translate: -50% -50%;
+  border: 1px solid #063d15;
+}
+
+.games-container select:focus {
+  border-color: #0a3b0e;
+  box-shadow: 0 0 4px #052a08;
+}
+
+.games-container .current-date {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  margin: 0;
+  translate: -50%;
+}
+
+.games-container p {
+  text-align: center;
+  width: max-content;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.games-container .loading-games {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  padding: 0 10px;
+  font-size: 18px;
+  color: #011a08;
+}
+
+.games-container .playing-teams {
+  display: flex;
+  position: relative;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.games-container .playing-teams > img {
+  width: 20%;
+  margin: 0 5px;
+}
+
+.games-container .playing-teams > p {
+  margin: 0 5px;
+}
+
+.games-container .game-score {
+  display: flex;
+  position: relative;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.games-container .game-score .team-score {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.games-container .game-score p {
+  margin: 0 5px;
+}
+
+.games-container .game-score .bold {
+  font-weight: 600;
+}
+
+.home-wrapper1 {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  width: 96vw;
+  left: 2vw;
+  padding-top: 2vh;
+}
+
+.home-wrapper1 .fetching-error-msg {
+  margin: 0;
+  font-family: monospace;
+  font-style: italic;
+  color: #02260c;
+  text-align: center;
+}
+
+.articles-container {
+  position: relative;
+  left: 1vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 20vw;
+  background-color: #d1d1d1;
+  padding: 0 20px;
+  padding-bottom: 10px;
+  height: max-content;
+}
+
+.articles-container > .title {
+  color: white;
+  box-shadow: inset 0 -3px 3px rgb(149, 172, 152);
+  background-color: #052a08;
+  margin: 0;
+  padding: 20px 0;
+  margin-bottom: 15px;
+  width: calc(100% + 40px);
+  position: relative;
+  text-align: center;
+  height: max-content;
+  font-family: "Ziggurat A", "Ziggurat B", Georgia, serif;
+}
+
+.articles-container > .link-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.articles-container .link {
+  text-decoration: none;
+  color: #052a08;
+  width: 70%;
+  font-size: 16px;
+  margin: 5px 0;
+  font-family: sans-serif;
+}
+
+.articles-container .link:hover {
+  text-decoration: underline;
+}
+
+.articles-container .source {
+  cursor: default;
+}
+
+.articles-container hr {
+  width: 100%;
+  height: 1px;
+  background: black;
+  border: none;
+}
+
+.articles-container .all-articles-link {
+  font-family: sans-serif;
+  text-align: center;
+  cursor: pointer;
+  color: #0000ee;
+}
+
+.articles-container .all-articles-link:hover {
+  text-decoration: underline;
+}
+
+.last-game-recap {
+  position: relative;
+  right: 1vw;
+  border: 1px solid #052a08;
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+  padding: 0 2vw;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2vh;
+  cursor: pointer;
+  background-color: #d7d7d7;
+  transition: 0.4s ease;
+}
+
+.last-game-recap:hover {
+  background-color: #c3c3c3;
+}
+
+.last-game-recap > .title {
+  color: white;
+  box-shadow: inset 0 -3px 3px rgb(149, 172, 152);
+  background-color: #052a08;
+  margin: 0;
+  margin-bottom: 15px;
+  width: calc(100% + 4vw);
+  position: relative;
+  text-align: center;
+  height: max-content;
+  font-family: "Ziggurat A", "Ziggurat B", Georgia, serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.last-game-recap .title > p {
+  margin: 0;
+  height: max-content;
+  font-size: 12px;
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  translate: -50%;
+}
+
+.last-game-recap .title > h1 {
+  margin: 0.8em 0;
+}
+
+.last-game-recap img {
+  width: 5vw;
+}
+
+.last-game-recap .score {
+  font-family: verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  margin: 0;
+}
+
+.last-game-recap .time-container {
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: verdana, sans-serif;
+  margin: 0;
+  gap: 10px;
+}
+
+.last-game-recap .time-container > p {
+  margin: 0;
+  white-space: nowrap;
+}
+
+.last-game-recap .score > div {
+  margin: 0;
+  display: flex;
+  height: max-content;
+}
+
+.last-game-recap .scores-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  margin: 0;
+}
+
+.last-game-recap .game-link-loader {
+  position: absolute;
+  top: 90%;
+}
+
+.last-game-recap .add-margin {
+  margin: 25px 0;
+}
+
+.last-game-recap .error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Noto Sans, sans-serif;
+  font-size: 14px;
+  gap: 2vh;
+  margin: 0;
+}
+
+.last-game-recap .error-container p {
+  margin: 0;
+}
+
+.recent-fanposts-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5vh;
+  margin-bottom: 8vh;
+}
+
+.recent-fanposts-container .no-fanposts-msg {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #02260c;
+}
+
+.recent-fanposts-container > h1 {
+  font-family: "Ziggurat A", "Ziggurat B", Georgia, serif;
+  border-bottom: 1px solid #02260c;
+  padding: 0 5vw;
+  padding-bottom: 5px;
+  color: #02260c;
+  margin: 0;
+}
+
+.recent-fanposts {
+  display: flex;
+  flex-direction: column;
+}
+
+.recent-fanposts {
+  width: 45vw;
+  display: flex;
+  justify-content: center;
+}
+
+.recent-fanposts .fanpost {
+  display: flex;
+  gap: 5%;
+  border-bottom: 1px solid #ddd;
+  margin: 0;
+  padding: 8px 0;
+  min-width: 0;
+  font-family: Optima, sans-serif;
+}
+
+.recent-fanposts .fanpost a {
+  width: 30%;
+  max-height: 150px;
+  object-fit: cover;
+}
+
+.recent-fanposts .fanpost img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.recent-fanposts .fanpost .text-container {
+  margin-top: 10px;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.recent-fanposts .fanpost .text-container .title-container {
+  max-height: 50px;
+  overflow: hidden;
+  position: relative;
+}
+
+.recent-fanposts .fanpost .text-container .link {
+  color: rgb(0, 42, 7);
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 600;
+  padding: 0;
+  word-wrap: break-word;
+  text-overflow: ellipsis;
+}
+
+.recent-fanposts .sub-title {
+  font-family: Arial Narrow, sans-serif;
+  font-style: italic;
+  font-size: 17px;
+  color: rgb(43, 43, 43);
+}
+
+.recent-fanposts .fanpost .text-container .link:hover {
+  text-decoration: underline;
+}
+
+.home-wrapper2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15vw;
+}
+
+.home-wrapper2 > img {
+  height: 60vh;
+}
+
+.home-wrapper3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-wrapper3 > .title {
+  font-family: "Ziggurat A", "Ziggurat B", Georgia, serif;
+  border-bottom: 1px solid #02260c;
+  padding: 0 5vw;
+  padding-bottom: 5px;
+  color: #02260c;
+  width: max-content;
+  margin-bottom: 6vh;
+}
+
+.all-youtube-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2vh;
+}
+
+.all-youtube-container > .title {
+  font-family: "Ziggurat A", "Ziggurat B", Georgia, serif;
+  border-bottom: 1px solid #02260c;
+  padding: 0 5vw;
+  padding-bottom: 5px;
+  color: #02260c;
+  width: max-content;
+  margin-bottom: 5vh;
+}
+
+.channels-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 15vw;
+  row-gap: 7.5vh;
+}
+
+.channels-container > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3vh;
+}
+
+.channels-container > div > p {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+}
+
+.last-game-rating-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  margin-top: 2vh;
+  position: relative;
+  z-index: 1;
+}
+
+.last-game-rating-container > .title > h1 {
+  font-family: "Ziggurat A", "Ziggurat B", Georgia, serif;
+  border-bottom: 1px solid #02260c;
+  padding: 0 5vw;
+  padding-bottom: 5px;
+  color: #02260c;
+  margin: 0;
+  width: max-content;
+}
+
+.last-game-rating-container .details-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.last-game-rating-container .rate-container {
+  font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-top: 1.5vh;
+}
+
+.last-game-rating-container .details-container .average-rating {
+  margin-bottom: 0;
+  font-weight: 600;
+  color: #052a08;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5vh;
+}
+
+.last-game-rating-container .details-container .avarage-user-rate-container {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.last-game-rating-container .details-container .number {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  background-color: rgb(44, 46, 44);
+  color: white;
+  font-weight: 600;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  font-size: 20px;
+}
+
+.last-game-rating-container .details-container .number.unknown-avg {
+  border: 4px solid rgb(85, 85, 85);
+  box-shadow: 0 0 10px 2px rgb(85, 85, 85);
+}
+
+.last-game-rating-container .details-container .number.unknown-avg * {
+  cursor: default;
+}
+
+.last-game-rating-container .details-container .user-rate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5vh;
+  margin: 0;
+}
+
+.last-game-rating-container .details-container .number-type {
+  font-weight: 600;
+  margin: 0;
+}
+
+.last-game-rating-container .details-container .average-rate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  margin: 0;
+  margin-right: 3vw;
+  margin-left: 1vw;
+}
+
+.last-game-rating-container
+  .details-container
+  .average-rate
+  .avarage-rating-msg {
+  margin: 0;
+}
+
+.last-game-rating-container .details-container .describe-text {
+  height: 12vh;
+  width: 15vw;
+  border-radius: 5px;
+  resize: none;
+  border: 2px solid #b0b0b0;
+  outline: none;
+  font-weight: 600;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #02260c;
+  line-height: 20px;
+}
+
+.last-game-rating-container .details-container .describe-text:focus {
+  border: 2px solid #02260c;
+}
+
+.last-game-rating-container .details-container .submit-container {
+  height: 12vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 2vw;
+}
+
+.last-game-rating-container .details-container .submit {
+  border: 2px solid #042102;
+  border-radius: 15px;
+  color: black;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  padding: 16px 24px;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.last-game-rating-container .details-container .submit:disabled {
+  pointer-events: none;
+}
+
+.last-game-rating-container .details-container .submit:hover {
+  color: #fff;
+  background-color: #042102;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.last-game-rating-container .details-container .submit:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.fething-last-game-rating-msg {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Optima, sans-serif;
+  font-weight: 600;
+  font-style: italic;
+  margin-bottom: calc(40px + 3vh);
+}
+
+.fething-last-game-rating-msg > p {
+  width: max-content;
+}
+
+.last-game-rating-expandor {
+  margin-bottom: calc(40px + 1vh);
+  opacity: 0;
+}
+
+.page-extendor {
+  opacity: 0;
+  position: relative;
+  top: 0vh;
+}
+
+.last-game-rates {
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  background-color: #ececec;
+}
+
+.last-game-rates .last-game-rates-msg {
+  border: none;
+  text-align: center;
+  z-index: 1;
+  margin: 0;
+  padding: 16px 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.last-game-rates .error-msg {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 600;
+  color: #011a08;
+}
+
+.last-game-rates .title {
+  color: white;
+  box-shadow: inset 0 -3px 3px rgb(149, 172, 152);
+  background-color: #052a08;
+  margin: 0;
+  padding: 20px 25px;
+  position: relative;
+  text-align: center;
+  height: max-content;
+  font-family: "Ziggurat A", "Ziggurat B", Georgia, serif;
+}
+
+.last-game-rates .rate-title-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  font-family: sans-serif;
+  font-weight: 600;
+  color: #02260c;
+  margin: 0;
+  border-bottom: 1px solid #011a08;
+  box-shadow: inset 0 -1px 3px rgb(74, 82, 76);
+  background-color: rgb(205, 205, 205);
+}
+
+.last-game-rates .rate-container {
+  margin: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  height: 50px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  border-bottom: 1px dashed #011a08;
+}
+
+.last-game-rates .rate-container.last {
+  border-bottom: none;
+}
+
+.last-game-rates .rate-container:hover {
+  background-color: #d1d1d1;
+}
+
+.last-game-rates .rate-container .rating-number {
+  position: absolute;
+  right: 20px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  background-color: rgb(44, 46, 44);
+  color: white;
+  font-weight: 600;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  font-size: 20px;
+}
+
+.last-game-rates .rate-container .rater-name {
+  font-size: 20px;
+  font-family: American Typewriter, serif;
+  color: #011a08;
+  width: 35%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  position: absolute;
+  left: 20px;
+}
+
+.last-game-rates .rate-container .game-date {
+  font-weight: 600;
+  font-family: sans-serif;
+  color: #011a08;
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+}
+
+.all-last-week-rates {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.all-last-week-rates .game-rates-title {
+  font-family: "Ziggurat A", "Ziggurat B", Georgia, serif;
+  border-bottom: 1px solid #02260c;
+  padding: 0 5vw;
+  padding-bottom: 5px;
+  color: #02260c;
+  margin: 0;
+}
+
+.all-last-week-rates .average-msg {
+  margin: 2.25vh 0;
+  font-family: monospace;
+  color: #011a08;
+  font-size: 14px;
+}
+
+.left-pop-ups {
+  margin: 0;
+  position: absolute;
+  top: calc(160px + 5vh);
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: Arial, sans-serif;
+  transition: 0.5s ease;
+  z-index: 2;
+}
+
+.left-pop-ups * {
+  margin: 0;
+}
+
+.left-pop-ups .tree {
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  cursor: default;
+}
+
+.left-pop-ups .tree:hover {
+  text-decoration: underline;
+}
+
+.left-pop-ups .tree * {
+  cursor: default;
+}
+
+.left-pop-ups > div {
+  display: flex;
+  align-items: center;
+  color: #072702;
+  font-weight: 600;
+}
+
+.left-pop-ups .pop-up-container {
+  background-color: #106a28;
+  overflow: hidden;
+  transition: 0.5s ease;
+  width: 150px;
+  z-index: 1;
+}
+
+.left-pop-ups .pop-up-container.invisible {
+  width: 0;
+}
+
+.left-pop-ups .bucks-container > * {
+  padding: 10px 25px;
+  border-bottom: 1px solid white;
+  width: 100%;
+  transition: 0.1s ease;
+  margin: 0;
+}
+
+.left-pop-ups .bucks-container > *:hover {
+  background-color: #0b2f05;
+}
+
+.left-pop-ups .social-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 5px 0;
+  border-radius: 3px;
+  width: 125px;
+}
+
+.left-pop-ups .social-container > div {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.left-pop-ups .social-container > div > * {
+  padding: 8px;
+  scale: 1.3;
+  color: white;
+  transition: 0.15s ease;
+}
+
+.left-pop-ups .social-container > div > *:hover {
+  color: #ccc;
+}
+
+.home-loader {
+  position: absolute;
+  top: calc(170px + 5vh);
+  right: 5%;
+  translate: 50%;
+  display: none;
+}

@@ -1,0 +1,861 @@
+.all-fanposts-container {
+  position: relative;
+  left: 50vw;
+  top: calc(60px + 3vh);
+  translate: -50%;
+  border: 1px solid #ccc;
+  width: 60vw;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.all-fanposts-container > .title-container {
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  height: 50px;
+}
+
+.all-fanposts-container > .title-container > .name-container {
+  background-color: #ccc;
+  height: 100%;
+  padding-right: 10px;
+  margin: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.all-fanposts-container > .title-container > .name-container > .title-name {
+  color: rgb(2, 44, 2);
+  margin-left: 10px;
+  font-family: "Ziggurat A", "Ziggurat B", Georgia, serif;
+  white-space: nowrap;
+}
+
+.all-fanposts-container > .title-container > .search-container {
+  margin: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.all-fanposts-container > .title-container > .search-container > input {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  cursor: auto;
+  padding: 0 10px;
+  border: 1px solid #bbb;
+  box-shadow: inset 2px 2px 2px #eee;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-style: oblique;
+  font-size: 16px;
+}
+
+.all-fanposts-page .page-expandor {
+  opacity: 0;
+  margin-top: calc(5vh + 45px);
+}
+
+.all-fanposts-container > .title-container > .search-container > input:focus {
+  box-shadow: inset 4px 4px 4px #eee;
+}
+
+.all-fanposts-container .remove-fanpost-btn {
+  border: 2px solid #012701;
+  color: #012701;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.5s ease;
+  font-size: 14px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 5px 8px;
+  font-weight: 600;
+}
+
+.all-fanposts-container .remove-fanpost-btn:hover {
+  background-color: #012701;
+  color: white;
+}
+
+.all-fanposts-container
+  > .title-container
+  > .search-container
+  > input::placeholder {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-style: italic;
+}
+
+.all-fanposts-container > .title-container > .search-container > button {
+  height: 100%;
+  width: 50px;
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 38, 0, 0.788);
+}
+
+.all-fanposts-container > .title-container > .search-container > button:hover {
+  background-color: rgba(0, 67, 0, 0.788);
+}
+
+.all-fanposts-container > .fanposts-container {
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.all-fanposts-container > .fanposts-container > .fanpost-link-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(4, 50, 4, 0.79);
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 15px;
+  position: relative;
+  width: 100%;
+}
+
+.all-fanposts-container > .fanposts-container > .last-fanpost {
+  border: none;
+  width: 100%;
+}
+
+.all-fanposts-container > .fanposts-container > .even {
+  background-color: #d5d5d5;
+}
+
+.all-fanposts-container
+  > .fanposts-container
+  .fanpost-link-container
+  > .left-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 5px;
+  left: 3%;
+  min-width: 0;
+  width: 55%;
+  word-wrap: break-word;
+}
+
+.all-fanposts-container .no-fanposts-msg {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+.all-fanposts-container .link,
+.more-posts-container .link {
+  color: rgb(0, 42, 7);
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 600;
+  padding: 0;
+  z-index: 1;
+}
+
+.all-fanposts-container .link:hover,
+.more-posts-container .link:hover {
+  text-decoration: underline;
+}
+
+.all-fanposts-container
+  > .fanposts-container
+  .fanpost-link-container
+  > .right-container {
+  margin-right: 3%;
+  gap: 8px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.all-fanposts-container
+  > .fanposts-container
+  .fanpost-link-container
+  > .right-container
+  > .comments-num {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: italic;
+  line-height: 20px;
+}
+
+.all-fanposts-container .titles {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(4, 50, 4, 0.79);
+}
+
+.all-fanposts-container .titles > * {
+  font-weight: 500;
+  padding: 0 10px;
+  border-bottom: 1px solid rgba(4, 43, 4, 0.804);
+  width: max-content;
+  margin-left: 10%;
+  margin-right: 10%;
+  height: max-content;
+  white-space: nowrap;
+}
+
+.post-container {
+  position: relative;
+  top: 3vh;
+  left: 50%;
+  translate: -50%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.post-container > .title {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  translate: -50%;
+}
+
+.post-container > .title > h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(2, 51, 13);
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.post-container .post-image {
+  width: 50vw;
+  max-height: 55vh;
+  object-fit: cover;
+  margin-top: 3vh;
+}
+
+.post-container .content-container {
+  min-width: 0;
+  width: 120%;
+  align-items: center;
+  word-wrap: break-word;
+  margin-bottom: 5vh;
+  margin-top: 5vh;
+}
+
+.more-posts-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #e1e1e1;
+  width: 15vw;
+  min-width: 0;
+  word-wrap: break-word;
+}
+
+.more-posts-container > h2 {
+  font-family: "Ziggurat A", "Ziggurat B", Georgia, serif;
+  margin: 0;
+  padding: 20px 0;
+  background-color: rgb(2, 43, 9);
+  color: rgb(203, 203, 39);
+  box-shadow: inset 0 -3px 3px rgb(109, 109, 12);
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.more-posts-container .link {
+  margin-bottom: 15px;
+  margin-left: 20px;
+  font-family: sans-serif;
+  font-weight: 500;
+  color: black;
+  font-size: 16px;
+}
+
+.post-fanpost .post-btn {
+  position: absolute;
+  left: 3vw;
+  top: 0;
+  border: 1px solid black;
+  width: 150px;
+  height: 60px;
+  border-radius: 9px;
+  font-size: 18px;
+  background-color: #0b765d;
+  cursor: pointer;
+  transition: 800ms;
+  font-family: sans-serif;
+  font-stretch: ultra-expanded;
+  translate: 0 50%;
+}
+
+.post-fanpost .post-btn:hover {
+  background-color: #0e9475;
+}
+
+.post-fanpost .post-msg {
+  position: absolute;
+  left: calc(1vw + 220px);
+  top: 45px;
+  font-size: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-weight: 600;
+}
+
+.return-opacity {
+  opacity: 1;
+}
+
+@keyframes postFanpost {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.post-fanpost-container {
+  position: relative;
+  left: 5vw;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.post-fanpost-container .title-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+}
+
+.post-fanpost-container .title-container > div {
+  position: relative;
+}
+
+.post-fanpost-container .title-container > * {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 17px;
+  display: flex;
+  width: 23vw;
+}
+
+.post-fanpost-container .title-container .sub-title-input {
+  padding-right: 25%;
+}
+
+.post-fanpost-container .title-container label {
+  position: absolute;
+  top: 0;
+  transition: 0.5s ease;
+  font-weight: 400;
+  cursor: text;
+  font-size: 17px;
+  transition: 0.5s ease;
+}
+
+.post-fanpost-container .title-input {
+  border: none;
+  border-bottom: 1px solid rgba(2, 48, 2, 0.829);
+  transition: 0.5s ease;
+  cursor: auto;
+  padding-bottom: 5px;
+  padding-right: 10%;
+}
+
+.post-fanpost-container .title-input ~ label.active {
+  top: -25px;
+  font-size: 14px;
+}
+
+.post-fanpost-container .title-input:focus {
+  outline: none;
+}
+
+.post-fanpost-container .textarea-container {
+  width: 35vw;
+  position: relative;
+}
+
+.post-fanpost-container .textarea-container .character-counter {
+  position: absolute;
+  bottom: 5%;
+  right: 1.5%;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14px;
+}
+
+.post-fanpost-container .textarea-container > .title-textarea {
+  resize: none;
+  max-height: 45vh;
+  min-height: 20vh;
+  width: 100%;
+  padding: 10px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 17px;
+  border: 1px solid #bbb;
+}
+
+.post-fanpost-container
+  .textarea-container
+  > .title-textarea::-webkit-scrollbar {
+  display: none;
+}
+
+.post-fanpost-container .textarea-container .btns-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+}
+
+.post-fanpost-container .textarea-container .btns-container > * {
+  border: 1px solid black;
+  background-color: #ccc;
+  cursor: pointer;
+  margin-left: 10px;
+  font-family: "Arial Narrow", Arial, sans-serif;
+  max-width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.post-fanpost-container .textarea-container .btns-container > button.active {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.post-fanpost-all-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  position: relative;
+  top: calc(60px + 3vh);
+  width: 85vw;
+  left: 5vw;
+}
+
+.post-fanpost-all-container > * {
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-fanpost-all-container .displaying-titles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4vh;
+  width: 25vw;
+}
+
+.post-fanpost-all-container .title {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(2, 51, 13);
+  margin: 0;
+  margin-bottom: 5px;
+  width: 25vw;
+  overflow-wrap: break-word;
+  text-align: center;
+}
+
+.post-fanpost-all-container .sub-title {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  margin-bottom: 5px;
+  width: 35vw;
+  font-weight: 400;
+  overflow-wrap: break-word;
+  text-align: center;
+}
+
+.post-fanpost-all-container .post-image {
+  width: 30vw;
+  max-height: 50vh;
+  object-fit: contain;
+  position: relative;
+  left: 2.5vw;
+}
+
+.post-fanpost-all-container .temp-to-img {
+  width: 30vw;
+  height: 50vh;
+  border-radius: 5px;
+  left: 2.5vw;
+  border: 1px dashed #012701;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 25px;
+  color: #012701;
+  font-family: Georgia, serif;
+  position: relative;
+}
+
+.post-fanpost-all-container .displaying-content {
+  width: 35vw;
+  position: relative;
+  left: 5vw;
+  word-wrap: break-word;
+}
+
+.post-fanpost-all-container .displaying-content > * {
+  margin: 0;
+}
+
+.post-fanpost-template {
+  left: 0;
+  top: 0;
+  translate: 0;
+}
+
+.fanposts-content {
+  margin: 2vh 0;
+}
+
+.fanposts-content > .break-line {
+  height: 0;
+  margin: 0;
+  margin: 3.5px 0;
+}
+
+.fanposts-content > .tab {
+  margin: 0;
+  margin-left: 15px;
+}
+
+.post-fanpost-request {
+  position: absolute;
+  left: 1vw;
+  top: 3vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.fanpost-page .like-button {
+  position: absolute;
+  left: 8vw;
+  translate: -50%;
+  top: calc(3vh + 180px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.fanpost-page .like-button > p {
+  margin: 0;
+}
+
+.fanpost-page .like-button .heart {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.fanpost-page .finish-container {
+  height: max-content;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0;
+}
+
+.fanpost-page .comments-container {
+  border: 2px solid #01180334;
+  padding: 25px;
+  border-radius: 8px;
+  width: 67vw;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.fanpost-page .comments-container .comment-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #013101;
+  padding: 5px 0;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-top: 10px;
+}
+
+.fanpost-page .comments-container .reply-container {
+  width: 100%;
+  margin: 0;
+}
+
+.fanpost-page .comments-container .reply-container .reply {
+  border-top: 1px dashed #013101;
+  padding-top: 25px;
+  display: flex;
+  margin: 0;
+}
+
+.fanpost-page .comments-container .reply-container .replied-to {
+  font-size: 12px;
+  font-style: italic;
+  height: max-content;
+  font-family: Andale Mono, monospace;
+  font-weight: 200;
+}
+
+.fanpost-page .comments-container .reply-container .comment {
+  position: relative;
+  left: 10px;
+}
+
+.fanpost-page .comments-container * {
+  font-family: sans-serif;
+  word-wrap: break-word;
+  min-width: 0;
+}
+
+.fanpost-page .comments-container p {
+  margin: 0;
+}
+
+.fanpost-page .comments-container > p {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  position: relative;
+  top: 20%;
+}
+
+.fanpost-page .comments-container .comment {
+  margin: 0;
+  max-width: 70%;
+}
+
+.fanpost-page .comments-container .content {
+  margin-top: 10px;
+  font-size: 17px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.fanpost-page .comments-container .likes-container {
+  position: absolute;
+  width: 100%;
+  gap: 15px;
+  right: 0;
+  display: flex;
+  justify-content: end;
+}
+
+.fanpost-page .comments-container .likes-container .like-icon {
+  scale: 1.3;
+  cursor: pointer;
+  padding: 0;
+}
+
+.fanpost-page .comments-container .likes-container > div {
+  display: flex;
+  gap: 4px;
+}
+
+.fanpost-page .comments-container .likes-container .reply-btn {
+  position: absolute;
+  right: 0;
+  top: 90%;
+  scale: 1.2;
+  cursor: pointer;
+  padding: 0;
+}
+
+.fanpost-page .comments-container .likes-container .reply-btn svg,
+.fanpost-page .comments-container .likes-container .reply-btn path {
+  cursor: pointer;
+}
+
+.fanpost-page .comments-container .maker {
+  margin-right: 10px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.fanpost-page .comments-container .remove-comment {
+  height: max-content;
+  padding: 0;
+}
+
+.fanpost-page .comments-container .date {
+  font-family: monospace;
+  font-style: italic;
+  font-size: 12px;
+  position: absolute;
+  top: -15px;
+}
+
+.fanpost-page .comments-container .input-container {
+  display: flex;
+}
+
+.fanpost-page .comments-container .input-container > input {
+  position: sticky;
+  border: 2px solid #013101;
+  border-top: none;
+  border-left: none;
+  padding-top: 40px;
+  width: 80%;
+  margin-bottom: 15px;
+  border-radius: 3px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  transition: 0.5s ease;
+  cursor: auto;
+  font-size: 25px;
+  text-align: bottom;
+}
+
+.fanpost-page .comments-container .input-container > input:focus {
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.fanpost-page .comments-container .input-container > input::placeholder {
+  font-size: 18px;
+  font-family: sans-serif;
+  position: absolute;
+  bottom: 2%;
+  font-weight: 600;
+}
+
+.fanpost-page .comments-container .section-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  gap: 5px;
+  background-color: #bbb;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  overflow: hidden;
+}
+
+.fanpost-page .comments-container .section-container p {
+  white-space: nowrap;
+}
+
+.fanpost-page .comments-container .section-container select {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+}
+
+.fanpost-page .comments-container .is-creator {
+  display: flex;
+}
+
+.fanpost-page .comments-container .is-creator > span {
+  color: rgb(30, 134, 65);
+  font-weight: 600;
+}
+
+.fanpost-page .comments-container button {
+  cursor: pointer;
+}
+
+.fanpost-page .comments-container .toggle-replies-btn {
+  position: absolute;
+  right: 5%;
+  top: 85%;
+  padding: 0;
+  display: flex;
+  letter-spacing: 0;
+  font-size: 12px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.fanpost-page .to-comments-hr {
+  margin: 8vh 0;
+  width: 90vw;
+}
+
+.post-fanpost .page-separator {
+  position: absolute;
+  left: 50%;
+  top: -40px;
+  width: 2px;
+  height: calc(100% + 20px);
+  margin-bottom: 20px;
+  translate: -50%;
+  background-color: rgb(3, 40, 1);
+}
+
+.fanpost-page .extend-scroll {
+  opacity: 0;
+  height: 0;
+  margin: 3vh 0;
+}
+
+.fanpost-page .fanpost-loader {
+  position: fixed;
+  translate: -50%;
+  left: 50%;
+  top: calc(160px + 3vh);
+  display: none;
+  z-index: 1;
+}
+
+.all-fanposts-page .all-fanposts-loader {
+  position: fixed;
+  translate: -50%;
+  left: 50%;
+  top: calc(160px + 3vh);
+  display: none;
+  z-index: 1;
+}
+
+.fanposts-container .credit-user-container {
+  margin-bottom: 4px;
+}
+
+.fanposts-container .right-container.all {
+  margin-right: 15% !important;
+}
+
+.fanposts-container .remove-fanpost-btn.all {
+  position: absolute;
+  right: 2%;
+}
