@@ -188,6 +188,8 @@ function App() {
     refetchOnWindowFocus: false,
     queryFn: async () => {
       const res = await axios.get(dbApiUrl + "/fanposts")
+      console.log(res)
+
       return res.data
     },
     onError: (error) => {
