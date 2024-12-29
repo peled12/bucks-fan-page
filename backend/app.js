@@ -23,7 +23,9 @@ app.use(bodyParser.json())
 
 const server = http.createServer(app)
 const io = socketIO(server, {
-  cors: { origin: ["http://localhost:3000"] },
+  cors: {
+    origin: ["http://localhost:3000", "https://bucks-fan-page.vercel.app"],
+  },
 })
 
 const users = {} // object to store all active users
@@ -67,7 +69,7 @@ io.on("connection", (socket) => {
 })
 
 const corsOptions = {
-  origin: ["http://localhost:3000"],
+  origin: ["http://localhost:3000", "https://bucks-fan-page.vercel.app"],
   methods: "GET, POST, PATCH, DELETE, PUT",
   allowedHeaders: "Content-Type, Authorization",
 }
