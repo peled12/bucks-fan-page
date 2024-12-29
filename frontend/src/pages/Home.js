@@ -135,7 +135,13 @@ function Home({
   const [lastGameRates, setlastGameRates] = useState(null)
 
   useEffect(() => {
-    if (lastGamesRating && lastBucksGame) {
+    if (
+      lastGamesRating &&
+      lastBucksGame &&
+      lastBucksGame &&
+      "Last game yet to come" &&
+      !isGameRatesError
+    ) {
       const firstNonLastGameIndex = lastGamesRating.rates.findIndex(
         (rate) => rate.gameID !== lastBucksGame.gameID
       )
@@ -438,7 +444,9 @@ function Home({
                 </>
               )}
             </div>
-          ) : lastGamesRatingStatus === "error" || isGameRatesError ? (
+          ) : lastGamesRatingStatus === "error" ||
+            isGameRatesError ||
+            lastBucksGame === "Last game yet to come" ? (
             <p className="fetching-error-msg">
               Problem fetching game rates. <br /> Please try again later.
             </p>
