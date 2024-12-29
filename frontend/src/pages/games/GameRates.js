@@ -187,6 +187,7 @@ function GameRates({ lastGameRatings, status, teams }) {
                   </span>
                   <div className="teams-container">
                     <img
+                      alt="team logo"
                       src={
                         teams.find(
                           (team) =>
@@ -199,6 +200,7 @@ function GameRates({ lastGameRatings, status, teams }) {
                       <p>VS</p>
                     </div>
                     <img
+                      alt="team logo"
                       src={
                         teams.find(
                           (team) =>
@@ -262,7 +264,7 @@ function GameRates({ lastGameRatings, status, teams }) {
           )
         ) : (
           <div className="loading-container">
-            <img src={loadingImg} />
+            <img src={loadingImg} alt="loading" />
             {status === "error" ? (
               <p>It looks like we have a problem. try again later!</p>
             ) : (

@@ -459,7 +459,10 @@ function Home({
                         handleGoToFanpost(post, index + 1, fanposts, navigate)
                       }
                     >
-                      <img src={post.img_url ? post.img_url : defaultImg} />
+                      <img
+                        src={post.img_url ? post.img_url : defaultImg}
+                        alt=""
+                      />
                     </a>
                     <div className="text-container">
                       <div className="title-container">
@@ -570,7 +573,7 @@ function Home({
             <div class="loader2 add-margin"></div>
           )}
         </div>
-        <img src={giannisImg} />
+        <img src={giannisImg} alt="Gianis pic" />
       </div>
       <div className="home-wrapper3">
         <div className="all-youtube-container">
@@ -581,37 +584,41 @@ function Home({
                 href="https://www.youtube.com/@AMHoops/featured"
                 target="_blank"
               >
-                <img src={amhoopsImg} />
+                <img src={amhoopsImg} alt="YT channel" />
               </a>
               <p>A.M. Hoops</p>
             </div>
             <div>
               <a href="https://www.youtube.com/@MJ2KALLDAY" target="_blank">
-                <img src={mj2kallday} />
+                <img src={mj2kallday} alt="YT channel" />
               </a>
               <p>MJ2KALLDAY</p>
             </div>
             <div>
               <a href="https://www.youtube.com/@HeatCheck" target="_blank">
-                <img src={heatcheck} />
+                <img src={heatcheck} alt="YT channel" />
               </a>
               <p>Heat Check</p>
             </div>
             <div>
               <a href="https://www.youtube.com/@jaywarvz" target="_blank">
-                <img src={jayworvs} />
+                <img src={jayworvs} alt="YT channel" />
               </a>
               <p>Jay Warvz</p>
             </div>
             <div>
               <a href="https://www.youtube.com/@KennyFR" target="_blank">
-                <img src={kennyforreal} />
+                <img src={kennyforreal} alt="YT channel" />
               </a>
               <p>Kenny For Real</p>
             </div>
             <div>
-              <a href="https://www.youtube.com/@bucks" target="_blank">
-                <img src={bucks} />
+              <a
+                href="https://www.youtube.com/@bucks"
+                target="_blank"
+                alt="YT channel"
+              >
+                <img src={bucks} alt="YT channel" />
               </a>
               <p>Milwaukee Bucks</p>
             </div>

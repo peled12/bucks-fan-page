@@ -17,6 +17,10 @@ import getCurrentDate from "./functions/getCurrentDate"
 
 import { IoMdClose } from "react-icons/io"
 
+/*
+  TODO: fix vercel deployment
+*/
+
 const Home = lazy(() => import("./pages/Home"))
 const Navigation = lazy(() => import("./navigation/Navigation"))
 const SignIn = lazy(() => import("./pages/registration/SignIn"))
@@ -679,7 +683,7 @@ function App() {
           <div className="title-container">
             <div>
               <p>Coin Bonuses</p>
-              <img src={coinImage} />
+              <img src={coinImage} alt="coins" />
             </div>
           </div>
           {userData && (

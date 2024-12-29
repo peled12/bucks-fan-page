@@ -70,10 +70,12 @@ function GameRecapLink({ teams, game, title }) {
       {game && game !== "error" && teams.length ? (
         <div className="scores-container">
           <img
+            alt="team logo"
             src={teams.find((team) => team.teamAbv === game.away).nbaComLogo1}
           />
           {getJsx()}
           <img
+            alt="team logo"
             src={teams.find((team) => team.teamAbv === game.home).nbaComLogo1}
           />
           {isPending && <div className="loader4 game-link-loader"></div>}

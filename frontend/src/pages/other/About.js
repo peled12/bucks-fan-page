@@ -100,7 +100,7 @@ function About() {
           <h2>Express Your Thoughts</h2>
           <p>I'm open for criticism. Feel free to contact me</p>
         </div>
-        <img src={giannisDrawing} />
+        <img src={giannisDrawing} alt="Giannis image" />
       </div>
       <div className="loader4 about-page-loader"></div>
       <div className="about-container">

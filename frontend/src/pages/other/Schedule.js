@@ -70,12 +70,14 @@ function Schedule({ teams, schedule, isLoading, isError }) {
                 >
                   <div className="playing-teams">
                     <img
+                      alt="team logo"
                       src={
                         teams.find((team) => game.away === team.teamAbv)
                           .nbaComLogo1
                       }
                     />
                     <img
+                      alt="team logo"
                       src={
                         teams.find((team) => game.home === team.teamAbv)
                           .nbaComLogo1
@@ -107,14 +109,14 @@ function Schedule({ teams, schedule, isLoading, isError }) {
             ) : (
               <div key={uuidv4()} className="game game-loading">
                 <div className="loader1 loading-game"></div>
-                <img src={wisconsinLogo} />
+                <img src={wisconsinLogo} alt="logo" />
               </div>
             )
           })}
         </div>
       ) : (
         <div className="loading-container">
-          <img src={loadingImg} />
+          <img src={loadingImg} alt="loading" />
           {isLoading ? (
             <p>It looks like we have a problem. try again later!</p>
           ) : (

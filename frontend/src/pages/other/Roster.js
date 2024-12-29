@@ -61,19 +61,20 @@ function Roster() {
                   className="image-container"
                 >
                   <img
+                    alt="headshot"
                     src={player.nbaComHeadshot || playerLoaderImg}
                     className="headshot"
                   />
-                  <img src={shadowBuck2} className="buck" />
+                  <img alt="headshot" src={shadowBuck2} className="buck" />
                 </a>
                 <hr />
                 <div className="name-container">
-                  <img src={shadowBuck1} className="not-hovered" />
+                  <img src={shadowBuck1} alt="image" className="not-hovered" />
                   <p>{name}</p>
                   <div className="color-container">
                     <div className="hovered-name">
                       <p className="first-name">{name.split(" ")[0]}</p>
-                      <img src={shadowBuck3} />
+                      <img src={shadowBuck3} alt="image" />
                       <p className="last-name">{name.split(" ")[1]}</p>
                     </div>
                   </div>
@@ -84,7 +85,7 @@ function Roster() {
         </div>
       ) : (
         <div className="loading-container">
-          <img src={loadingImg} />
+          <img src={loadingImg} alt="loading" />
           {isError ? (
             <p>It looks like we have a problem. try again later!</p>
           ) : (

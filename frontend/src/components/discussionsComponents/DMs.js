@@ -789,6 +789,7 @@ function DMs({ currentUserChats, setcurrentUserChats, query, setquery }) {
         <div className="current-chat">
           <div className="other-user-title-container">
             <img
+              alt="PFP"
               src={
                 activeChat.other_profile_pic ||
                 (friendsTemplates &&
@@ -1100,6 +1101,7 @@ function DMs({ currentUserChats, setcurrentUserChats, query, setquery }) {
                             }
                           </h2>
                           <img
+                            alt="PFP"
                             src={
                               chat.other_profile_pic ||
                               (friendsTemplates &&

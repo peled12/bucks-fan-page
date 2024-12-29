@@ -48,6 +48,7 @@ function Games({
                     >
                       <div className="playing-teams">
                         <img
+                          alt="away team logo"
                           src={
                             teams.find((team) => game.away === team.teamAbv)
                               .nbaComLogo1
@@ -55,6 +56,7 @@ function Games({
                         />
                         <p>{game.gameClock}</p>
                         <img
+                          about="home team logo"
                           src={
                             teams.find((team) => game.home === team.teamAbv)
                               .nbaComLogo1
@@ -129,6 +131,7 @@ function Games({
                   >
                     <div className="playing-teams">
                       <img
+                        alt="away team logo"
                         src={
                           teams.find((team) => game.home === team.teamAbv)
                             .nbaComLogo1
@@ -136,6 +139,7 @@ function Games({
                       />
                       <p>VS</p>
                       <img
+                        alt="home team logo"
                         src={
                           teams.find((team) => game.away === team.teamAbv)
                             .nbaComLogo1

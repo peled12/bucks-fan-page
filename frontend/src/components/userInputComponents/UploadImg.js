@@ -21,7 +21,7 @@ function UploadImg({ imgUrl, setimgUrl }) {
     <div className="all-upload-container">
       <div className="upload-container">
         {imgUrl ? (
-          <img src={imgUrl} className="seat-sell-img" />
+          <img src={imgUrl} className="seat-sell-img" alt="" />
         ) : (
           <label htmlFor="post-fanpost-input-file" className="drop-area">
             <FaCloudUploadAlt className="upload-icon" />

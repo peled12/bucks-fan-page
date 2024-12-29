@@ -49,7 +49,11 @@ function ProfilePic({ imageUrl, setImageUrl }) {
         onDrop={handleDrop}
         onDragOver={(e) => e.preventDefault()}
       >
-        <img src={imageUrl ? imageUrl : defaultPic} className="profile-pic" />
+        <img
+          src={imageUrl ? imageUrl : defaultPic}
+          alt=""
+          className="profile-pic"
+        />
       </div>
       <button className="remove-image-btn" onClick={handleRemoveImg}>
         Remove image

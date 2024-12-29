@@ -76,7 +76,7 @@ function AllArticles({ articles, isError }) {
         </>
       ) : (
         <div className="loading-container">
-          <img src={loadingImg} />
+          <img src={loadingImg} alt="loading" />
           {isError ? (
             <p>It looks like we have a problem. try again later!</p>
           ) : (

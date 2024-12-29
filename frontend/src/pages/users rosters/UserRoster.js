@@ -510,14 +510,26 @@ function UserRoster() {
                             : {}
                         }
                       >
-                        <img className="man-image" src={man.img_url} />
+                        <img
+                          className="man-image"
+                          src={man.img_url}
+                          alt="image"
+                        />
                       </div>
-                      <img className="line-seperator" src={lineSeperator} />
+                      <img
+                        className="line-seperator"
+                        src={lineSeperator}
+                        alt="line"
+                      />
                       <div className="man-cost-container">
                         <span className="man-cost">
                           Cost: {man.cost}{" "}
                           {man.cost < 100 && <p style={{ opacity: "0" }}>1</p>}
-                          <img className="coin-icon" src={coinIcon} />
+                          <img
+                            className="coin-icon"
+                            alt="coins"
+                            src={coinIcon}
+                          />
                         </span>
                         {myUser.roster[displayingMen + "_bought"].includes(
                           man.name
@@ -559,7 +571,7 @@ function UserRoster() {
         </>
       ) : (
         <div className="loading-container">
-          <img src={loadingImg} />
+          <img src={loadingImg} alt="loading" />
           {isSignedIn ? (
             <p>Loading...</p>
           ) : (

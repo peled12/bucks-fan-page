@@ -505,7 +505,7 @@ function PostFanpost() {
           <UploadImg imgUrl={imgUrl} setimgUrl={setimgUrl} />
           <div className="page-separator" ref={separatorRef}></div>
           {imgUrl ? (
-            <img className="post-image" src={imgUrl} />
+            <img className="post-image" src={imgUrl} alt="post image" />
           ) : (
             <div className="temp-to-img">The image would be displayed here</div>
           )}

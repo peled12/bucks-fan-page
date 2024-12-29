@@ -112,6 +112,7 @@ function GameRecap({ teams, schedule }) {
         <div className="game-container">
           <div className="title">
             <img
+              alt="away team logo"
               className="team-img"
               src={teams.find((team) => team.teamAbv === game.away).nbaComLogo1}
             />
@@ -128,6 +129,7 @@ function GameRecap({ teams, schedule }) {
               <p>{game.gameClock && game.gameClock}</p>
             </div>
             <img
+              alt="home team logo"
               className="team-img"
               src={teams.find((team) => team.teamAbv === game.home).nbaComLogo1}
             />
@@ -296,7 +298,7 @@ function GameRecap({ teams, schedule }) {
             </div>
           ) : (
             <div className="loading-container loading-polls">
-              <img src={loadingImg} />
+              <img src={loadingImg} alt="loading" />
               {pollsStatus === "error" ? (
                 <p>It looks like we have a problem. try again later!</p>
               ) : (
@@ -308,7 +310,7 @@ function GameRecap({ teams, schedule }) {
         </div>
       ) : (
         <div className="loading-container">
-          <img src={loadingImg} />
+          <img src={loadingImg} alt="loading" />
           {isError ? (
             <p>It looks like we have a problem. try again later!</p>
           ) : (

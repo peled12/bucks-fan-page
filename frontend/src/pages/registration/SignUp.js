@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, useContext } from "react"
+import React, { useState, useRef, useContext } from "react"
 
 import "./registration.css"
 
@@ -420,7 +420,7 @@ function SignUp({ setcurrentPassword, setcurrentEmail }) {
           </form>
         </div>
       )}
-      <img src={KhrisImg} className="khris-img1" />
+      <img src={KhrisImg} alt="Khris image" className="khris-img1" />
       <div
         className="page-text-container"
         style={startAuth ? { top: "calc(160px + 20vh)" } : {}}

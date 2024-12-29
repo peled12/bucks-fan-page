@@ -427,7 +427,7 @@ function Navigation({ setpassword, setemail }) {
           {isSignedIn && userData && (
             <button className="navBtn coins-num">
               Coins: {userData.coins}{" "}
-              <img className="coin-icon" src={coinIcon} />
+              <img className="coin-icon" alt="coins" src={coinIcon} />
             </button>
           )}
         </div>
@@ -446,7 +446,7 @@ function Navigation({ setpassword, setemail }) {
             <IoMdArrowDropdown />
           </div>
           <button className="logo" onClick={() => handleNavigate("/")}>
-            <img src={bucks_logo} />
+            <img src={bucks_logo} alt="Bucks logo" />
           </button>
           <div className="icon-container">
             <div

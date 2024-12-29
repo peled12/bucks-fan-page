@@ -222,7 +222,7 @@ function Fanposts({ fanposts, status, refetchFanposts }) {
         </>
       ) : (
         <div className="loading-container">
-          <img src={loadingImg} />
+          <img src={loadingImg} alt="loading" />
           {status === "loading" ? (
             <p>Loading...</p>
           ) : (

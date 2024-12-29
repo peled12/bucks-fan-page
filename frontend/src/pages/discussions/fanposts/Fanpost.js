@@ -70,7 +70,7 @@ function Fanpost({ fanposts, status }) {
   if (status !== "success")
     return (
       <div className="loading-container">
-        <img src={loadingImg} />
+        <img src={loadingImg} alt="loading" />
         {status === "loading" ? (
           <p>loading...</p>
         ) : (
@@ -587,6 +587,7 @@ function Fanpost({ fanposts, status }) {
           <>
             <p>Remove like</p>
             <img
+              alt="filled heart"
               src={filledHeart}
               className="heart"
               onClick={() => handleLikeFanpost("remove like")}
@@ -634,7 +635,7 @@ function Fanpost({ fanposts, status }) {
             , Made by {fanposts[index].maker}
           </em>
         </div>
-        <img src={fanposts[index].img_url} className="post-image" />
+        <img alt="" src={fanposts[index].img_url} className="post-image" />
         <div className="content-container">
           <div className="fanposts-content">
             {styleText(

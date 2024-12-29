@@ -13,6 +13,7 @@ function RosterSpot({
       {man ? (
         <img
           src={man.img_url}
+          alt=""
           onClick={() =>
             removeFromRoster && removeFromRoster(man.name, manType)
           }

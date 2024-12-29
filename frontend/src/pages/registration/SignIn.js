@@ -375,7 +375,7 @@ function SignIn({ setcurrentPassword, setcurrentEmail }) {
           </div>
         </form>
       </div>
-      <img src={dameImg} className="dame-img1" />
+      <img src={dameImg} alt="Damian image" className="dame-img1" />
       <div className="page-text-container">
         <h1>Welcome Back!</h1>
         <p>Welcome back to the Bucks Fan Page!</p>

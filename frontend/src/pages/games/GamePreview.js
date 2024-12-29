@@ -239,7 +239,11 @@ function GamePreview({ teams, schedule }) {
                 <div className="loader4"></div>
               )}
             </div>
-            <img className="team-img" src={awayTeam.nbaComLogo1} />
+            <img
+              className="team-img"
+              alt="away team logo"
+              src={awayTeam.nbaComLogo1}
+            />
             <p>
               {awayTeam.wins} - {awayTeam.loss}
             </p>
@@ -268,7 +272,11 @@ function GamePreview({ teams, schedule }) {
                 <div className="loader4"></div>
               )}
             </div>
-            <img className="team-img" src={homeTeam.nbaComLogo1} />
+            <img
+              className="team-img"
+              alt="home team logo"
+              src={homeTeam.nbaComLogo1}
+            />
             <p>
               {homeTeam.wins} - {homeTeam.loss}
             </p>
@@ -317,7 +325,7 @@ function GamePreview({ teams, schedule }) {
                         href={"https://www.nba.com/player/" + player.nbaComID}
                         target="_blank"
                       >
-                        <img src={player.nbaComHeadshot} />
+                        <img src={player.nbaComHeadshot} alt="player image" />
                         <div className="stats">
                           <p>
                             {player.stats[player.stat1]}{" "}
@@ -340,7 +348,7 @@ function GamePreview({ teams, schedule }) {
                         href={"https://www.nba.com/player/" + player.nbaComID}
                         target="_blank"
                       >
-                        <img src={player.nbaComHeadshot} />
+                        <img src={player.nbaComHeadshot} alt="player image" />
                         <div className="stats">
                           <p>
                             {player.stats[player.stat1]}{" "}
@@ -469,7 +477,7 @@ function GamePreview({ teams, schedule }) {
           </div>
         ) : (
           <div className="loading-container loading-polls">
-            <img src={loadingImg} />
+            <img src={loadingImg} alt="loading" />
             {pollsStatus === "error" ? (
               <p>It looks like we have a problem. try again later!</p>
             ) : (

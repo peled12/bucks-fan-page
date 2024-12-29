@@ -645,7 +645,7 @@ function TradeIdeas() {
         </>
       ) : (
         <div className="loading-container">
-          <img src={loadingImg} />
+          <img src={loadingImg} alt="loading" />
           {status === "error" ? (
             <p>It looks like we have a problem. try again later!</p>
           ) : (

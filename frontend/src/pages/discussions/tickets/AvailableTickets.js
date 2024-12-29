@@ -191,7 +191,7 @@ function AvailableTickets() {
                     }
                     onClick={(e) => handleStartDM(e, ticket.seller)}
                   >
-                    <img src={ticket.seat_img || grayLogo} />
+                    <img src={ticket.seat_img || grayLogo} alt="seat image" />
                     <div className="info-container">
                       <span>
                         Seller:{" "}

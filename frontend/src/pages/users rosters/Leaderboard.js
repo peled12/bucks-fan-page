@@ -289,9 +289,15 @@ function Leaderboard() {
                 }
               >
                 <div className="user-left">
-                  {index === 0 && <img src={trophy1} className="trophy-img" />}
-                  {index === 1 && <img src={trophy2} className="trophy-img" />}
-                  {index === 2 && <img src={trophy3} className="trophy-img" />}
+                  {index === 0 && (
+                    <img src={trophy1} alt="trophy" className="trophy-img" />
+                  )}
+                  {index === 1 && (
+                    <img src={trophy2} alt="trophy" className="trophy-img" />
+                  )}
+                  {index === 2 && (
+                    <img src={trophy3} alt="trophy" className="trophy-img" />
+                  )}
 
                   <h2
                     className="username"
@@ -314,6 +320,7 @@ function Leaderboard() {
 
                   <div className="in-container">
                     <img
+                      alt="profile pic"
                       src={user.profile_pic_url || defaultPFP}
                       className="profile-pic"
                     />
@@ -343,7 +350,11 @@ function Leaderboard() {
                           <span>Available coins: {user.coins}</span>
                           <div className="coins-spent-container">
                             <p>Coins spent: {user.roster.coins_spent}</p>
-                            <img className="coin-icon" src={coinIcon} />
+                            <img
+                              className="coin-icon"
+                              alt="coins"
+                              src={coinIcon}
+                            />
                           </div>
                           <div className="in">
                             {user.roster.rating.length ? (
@@ -433,7 +444,7 @@ function Leaderboard() {
           ))
         ) : (
           <div className="loading-container">
-            <img src={loadingImg} />
+            <img src={loadingImg} alt="loading" />
             {isError ? (
               <p>It looks like we have a problem. try again later!</p>
             ) : (
