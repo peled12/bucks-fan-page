@@ -38,7 +38,7 @@ function SignUp({ setcurrentPassword, setcurrentEmail }) {
   const [emailExistError, setemailExistError] = useState("")
   const [userNameExistError, setuserNameExistError] = useState("")
 
-  const [startAuth, setstartAuth] = useState(true)
+  const [startAuth, setstartAuth] = useState(false)
   const [authCode, setauthCode] = useState(0)
 
   const errorPostingRef = useRef(null)
@@ -343,6 +343,7 @@ function SignUp({ setcurrentPassword, setcurrentEmail }) {
 
   return (
     <>
+      <div className="page-description">Sign up to join our community!</div>
       <h1 className="page-title">Sign up</h1>
       <div className="loader4 sign-up-loader"></div>
       {startAuth ? (

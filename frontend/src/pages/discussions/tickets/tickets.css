@@ -16,6 +16,17 @@
   margin-bottom: 0;
 }
 
+.tickets-container .no-tickets-msg a {
+  color: #2479e7;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.tickets-container .no-tickets-msg a:hover {
+  text-decoration: underline;
+  color: #1d62bb;
+}
+
 .tickets-container > .all-tickets-title {
   margin: 0;
   display: flex;
