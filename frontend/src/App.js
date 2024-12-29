@@ -18,7 +18,7 @@ import getCurrentDate from "./functions/getCurrentDate"
 import { IoMdClose } from "react-icons/io"
 
 /*
-  TODO: fix vercel deployment
+  TODO: commit without saving requests
 */
 
 const Home = lazy(() => import("./pages/Home"))
