@@ -43,9 +43,13 @@ Try the app here: [Demo Link](your-demo-link-here)
 - **Backend**: Node.js, Express.js, Socket.IO Server
 - **Database**: MongoDB
 - **Real-Time Communication**: Socket.IO
+- **Deployment**: Vercel, Render
 
 ## Feedback
 Feel free to provide any feedback or suggestions on this project. I'm always looking to improve and grow as a developer!
+
+> **Note**: The database hosted on **Render** may take up to 50 seconds to become fully usable after being idle or restarting.
+
 
 
   
