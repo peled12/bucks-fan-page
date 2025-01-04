@@ -1,6 +1,6 @@
 # Real-Time Messaging App
 
-A real-time messaging web application built with **React.js**, **Node.js**, and **MongoDB**. This project allows users to interact in real-time using **Socket.IO**, providing features like direct messaging, notifications, and various interactive elements for users to engage with.
+A real-time messaging web application built with **React.js**, **Node.js**, and **MongoDB**. This project allows users to interact in real-time using **Socket.IO**, providing features like direct messaging, real-time NBA data and various interactive elements for users to engage with.
 
 ## Features
 - **Real-Time Messaging**: Instant messaging with Socket.IO, allowing seamless communication between users.
@@ -10,6 +10,7 @@ A real-time messaging web application built with **React.js**, **Node.js**, and 
 - **Frontend with React**: The user interface is built with **React.js** to offer a dynamic, responsive experience.
 - **Socket.IO Integration**: Real-time updates and interactions between users, including direct messaging.
 - **Real-Time NBA Data**: The app integrates a real-time NBA API to provide live game scores, game recaps, and previews.
+- **Leaderboard**: Users that interact more with the website can get more coins and build a roster. The best rosters will be shown on the leaderboard!
 - **User-Generated Basketball Opinions**: Users have multiple ways to share and post their opinions on basketball, including game predictions, ratings, and commentary.
 
 ## Demo
