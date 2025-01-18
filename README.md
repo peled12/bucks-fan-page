@@ -15,7 +15,7 @@ A Milwaukee Bucks fan page app where fans can connect, share content, engage in 
 - **User-Generated Basketball Opinions**: Users have multiple ways to share and post their opinions on basketball, including game predictions, ratings, and commentary.
 
 ## Try it yourself
-Try the app here: [Demo Link](your-demo-link-here) (recommended)
+Try the app here: [Demo Link](your-demo-link-here) (recommended)  
 or install and run it locally:
 
 ## Installation
