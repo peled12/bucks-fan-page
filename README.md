@@ -1,6 +1,7 @@
-# Real-Time Messaging App
+# Fan Page App
 
-A real-time messaging web application built with **React.js**, **Node.js**, and **MongoDB**. This project allows users to interact in real-time using **Socket.IO**, providing features like direct messaging, real-time NBA data and various interactive elements for users to engage with.
+
+A Milwaukee Bucks fan page app where fans can connect, share content, engage in discussions, and participate in community activities. It offers a space for fans to interact, share their thoughts on the team, and enjoy a dynamic environment built around their shared passion for the Bucks.
 
 ## Features
 - **Real-Time Messaging**: Instant messaging with Socket.IO, allowing seamless communication between users.
