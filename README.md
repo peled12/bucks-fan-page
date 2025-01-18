@@ -1,4 +1,4 @@
-# Fan Page App
+# Bucks Fan Page App
 
 
 A Milwaukee Bucks fan page app where fans can connect, share content, engage in discussions, and participate in community activities. It offers a space for fans to interact, share their thoughts on the team, and enjoy a dynamic environment built around their shared passion for the Bucks.
