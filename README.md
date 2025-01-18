@@ -17,7 +17,6 @@ A Milwaukee Bucks fan page app where fans can connect, share content, engage in 
 ## Try it yourself
 Try the app here: [Demo Link](your-demo-link-here) (recommended)  
 or install and run it locally:
-
 ## Installation
 
 1. Clone the repository:
