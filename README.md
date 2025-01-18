@@ -14,8 +14,9 @@ A Milwaukee Bucks fan page app where fans can connect, share content, engage in 
 - **Leaderboard**: Users that interact more with the website can get more coins and build a roster. The best rosters will be shown on the leaderboard!
 - **User-Generated Basketball Opinions**: Users have multiple ways to share and post their opinions on basketball, including game predictions, ratings, and commentary.
 
-## Live Demo
+## Try it yourself
 Try the app here: [Demo Link](your-demo-link-here) (recommended)
+or install and run it locally:
 
 ## Installation
 
