@@ -13,7 +13,7 @@ A real-time messaging web application built with **React.js**, **Node.js**, and 
 - **Leaderboard**: Users that interact more with the website can get more coins and build a roster. The best rosters will be shown on the leaderboard!
 - **User-Generated Basketball Opinions**: Users have multiple ways to share and post their opinions on basketball, including game predictions, ratings, and commentary.
 
-## Demo
+## Live Demo (recommended)
 Try the app here: [Demo Link](your-demo-link-here)
 
 ## Installation
