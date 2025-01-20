@@ -44,7 +44,7 @@ or install and run it locally:
      npm start
    - For the backend:
     ```bash
-    node app
+       node app
 6. Open your browser and go to http://localhost:3000 to view the application.
 
 ## Technologies Used
