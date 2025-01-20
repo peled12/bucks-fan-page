@@ -41,10 +41,10 @@ or install and run it locally:
 5. Start both the frontend and backend servers:  
    - For the frontend:
      ```bash
-     npm start
+      npm start
    - For the backend:
     ```bash
-       node app
+   node app
 6. Open your browser and go to http://localhost:3000 to view the application.
 
 ## Technologies Used
