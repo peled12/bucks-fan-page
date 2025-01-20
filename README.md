@@ -38,11 +38,11 @@ or install and run it locally:
 - Open the .env file and add the following line:  
   ```bash
   dbApiUrl=http://localhost:3001
-5. Start both the frontend and backend servers:
+5. Start both the frontend and backend servers:vv
    - For the frontend:
      ```bash
      npm start
-      - For the backend:
+   - For the backend:
     ```bash
     node app
 6. Open your browser and go to http://localhost:3000 to view the application.
