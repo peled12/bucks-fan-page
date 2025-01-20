@@ -31,14 +31,14 @@ or install and run it locally:
    ```bash
    cd bucks-fan-page/backend
    npm install
-4. Create a .env file for the backend and configure the database API URL:
+4. Create a .env file for the backend and configure the database API URL:  
    - Inside the frontend folder, create a .env file:
    ```bash
    touch .env
-- Open the .env file and add the following line:
+- Open the .env file and add the following line:  
   ```bash
   dbApiUrl=http://localhost:3001
-6. Start both the frontend and backend servers:
+5. Start both the frontend and backend servers:
    - For the frontend:
      ```bash
      npm start
