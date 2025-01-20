@@ -42,7 +42,7 @@ or install and run it locally:
    - For the frontend:
      ```bash
      npm start
-   - For the backend:
+      - For the backend:
     ```bash
     node app
 6. Open your browser and go to http://localhost:3000 to view the application.
