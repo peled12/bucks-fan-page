@@ -31,14 +31,21 @@ or install and run it locally:
    ```bash
    cd bucks-fan-page/backend
    npm install
-4. Start both the frontend and backend servers:
+4. Create a .env file for the backend and configure the database API URL:
+   - Inside the frontend folder, create a .env file:
+   ```bash
+   touch .env
+- Open the .env file and add the following line:
+  ```bash
+  dbApiUrl=http://localhost:3001
+6. Start both the frontend and backend servers:
    - For the frontend:
      ```bash
      npm start
-  - For the backend:
+- For the backend:
     ```bash
     node app
-5. Open your browser and go to http://localhost:3000 to view the application.
+6. Open your browser and go to http://localhost:3000 to view the application.
 
 ## Technologies Used
 - **Frontend**: React.js, Socket.IO Client, React-query
