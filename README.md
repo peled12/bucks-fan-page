@@ -38,7 +38,7 @@ or install and run it locally:
 - Open the .env file and add the following line:  
   ```bash
   dbApiUrl=http://localhost:3001
-5. Start both the frontend and backend servers:vv
+5. Start both the frontend and backend servers:  
    - For the frontend:
      ```bash
      npm start
