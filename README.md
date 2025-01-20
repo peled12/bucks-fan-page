@@ -33,11 +33,11 @@ or install and run it locally:
    npm install
 4. Create a .env file for the backend and configure the database API URL:
    - Inside the frontend folder, create a .env file:  
-   ```bash
-   touch .env
-- Open the .env file and add the following line:  
-  ```bash
-  dbApiUrl=http://localhost:3001
+      ```bash
+      touch .env
+   - Open the .env file and add the following line:  
+     ```bash
+     dbApiUrl=http://localhost:3001
 5. Start both the frontend and backend servers:  
    - For the frontend:
      ```bash
