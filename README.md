@@ -52,7 +52,7 @@ or install and run it locally:
 - **Backend**: Node.js, Express.js, Socket.IO Server
 - **Database**: MongoDB
 - **Real-Time Communication**: Socket.IO
-- **Deployment**: Vercel, Render
+- **Deployment**: Vercel, Koyeb
 
 ## Feedback
 Feel free to provide any feedback or suggestions on this project. I'm always looking to improve and grow as a developer!
@@ -60,7 +60,6 @@ Feel free to provide any feedback or suggestions on this project. I'm always loo
 ***
 Thank you for taking the time to review my work. I look forward to the opportunity to contribute to your team!
 
-> **Note**: The database hosted on **Render** may take up to 50 seconds to become fully usable after being idle or restarting.  
 > **Note**: Game previews and reviews are not available during the offseason.
 
 
