@@ -598,19 +598,21 @@ function Navigation({ setpassword, setemail }) {
       {isHomePage && (
         <div className="left-pop-ups">
           <div>
-            <div
-              className="tree bucks"
-              ref={bucksConRef}
-              onMouseEnter={(e) =>
-                handleToggleSocialLeft(e, "enter", "bucks-container")
-              }
-              onMouseLeave={(e) =>
-                handleToggleSocialLeft(e, "leave", "bucks-container")
-              }
-            >
-              Bucks
-              <IoMdArrowDropright />
-            </div>
+            {/*
+              <div
+                className="tree bucks"
+                ref={bucksConRef}
+                onMouseEnter={(e) =>
+                  handleToggleSocialLeft(e, "enter", "bucks-container")
+                }
+                onMouseLeave={(e) =>
+                  handleToggleSocialLeft(e, "leave", "bucks-container")
+                }
+              >
+                Bucks
+                <IoMdArrowDropright />
+              </div>
+              */}
             <div
               className="bucks-container pop-up-container invisible"
               onMouseLeave={(e) =>
