@@ -115,9 +115,11 @@ function About() {
         </div>
         <div className="meet-container">
           <h1>About Me</h1>
-          <p>My name is Peled Koren, React developer.</p>
+          <p>My name is Peled Koren, a full-stack developer</p>
           <p>
-            I have 2 years of experience with react, js, java, mongodb, nodeJs.
+            I have been a Milwakee Bucks fan since 2020, when i was 12. <br />
+            Combining my love for the Bucks and my passion for programming, I
+            created this website.
           </p>
         </div>
         <div className="contact-container">
