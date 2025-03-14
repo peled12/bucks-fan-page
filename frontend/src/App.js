@@ -17,10 +17,6 @@ import getCurrentDate from "./functions/getCurrentDate"
 
 import { IoMdClose } from "react-icons/io"
 
-/*
-  TODO: commit without saving requests
-*/
-
 const Home = lazy(() => import("./pages/Home"))
 const Navigation = lazy(() => import("./navigation/Navigation"))
 const SignIn = lazy(() => import("./pages/registration/SignIn"))
