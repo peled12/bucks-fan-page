@@ -449,7 +449,8 @@ function App() {
     const today = new Date().toLocaleDateString() // get the date
     const lastRun = localStorage.getItem("lastRunDate")
 
-    if (lastRun !== today) {
+    // last run was not today or its the first run
+    if (lastRun !== today || !lastRun) {
       // this runs max once between midnights
 
       const isBetweenOct15toJune = isDateBetweenOct15ToJune()
