@@ -438,7 +438,8 @@
   gap: 15vw;
 }
 
-.home-wrapper2 > img {
+.home-wrapper2 > img,
+.home-wrapper1 > img {
   height: 60vh;
 }
 

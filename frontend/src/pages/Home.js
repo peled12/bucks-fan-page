@@ -307,19 +307,27 @@ function Home({
   return (
     <>
       <h1 className="page-title">Home page</h1>
+      <p className="page-description">
+        NOTE: Any third-party API like game previews & recaps, Bucks' roster,
+        schedule, daily schedule and more are not available <b>yet</b> duo to a
+        maximum request amount.
+      </p>
       <div className="loader4 home-loader"></div>
-      <Games
-        date={date}
-        handleSelectChange={handleSelectChange}
-        teams={teams}
-        showLastNightGames={showLastNightGames}
-        yesterdayGames={yesterdayGames}
-        tomorrowGames={tomorrowGames}
-        handleNavigateGameRecap={(gameID) => navigate("/GameRecap/" + gameID)}
-        handleNavigateGamePreview={(gameID, gameDate, gameTime) =>
-          navigate("/GamePreview/" + gameID + "/" + gameDate + "/" + gameTime)
-        }
-      />
+      {/*
+        temp: should uncomment that
+        <Games
+          date={date}
+          handleSelectChange={handleSelectChange}
+          teams={teams}
+          showLastNightGames={showLastNightGames}
+          yesterdayGames={yesterdayGames}
+          tomorrowGames={tomorrowGames}
+          handleNavigateGameRecap={(gameID) => navigate("/GameRecap/" + gameID)}
+          handleNavigateGamePreview={(gameID, gameDate, gameTime) =>
+            navigate("/GamePreview/" + gameID + "/" + gameDate + "/" + gameTime)
+          }
+        />
+        */}
       {isSignedIn &&
       lastGamesRating &&
       yesterdayGames &&
@@ -387,73 +395,82 @@ function Home({
         <div className="last-game-rating-expandor">hi</div>
       )}
       <div className="home-wrapper1">
-        <div className="all-last-week-rates">
-          <h1 className="game-rates-title">Game Rates</h1>
-          <p className="average-msg">
-            {averageLastGameRating &&
-              `Last game average rating: ${averageLastGameRating}.`}
-          </p>
-          {filteredLastGamesRating ? (
-            <div className="last-game-rates">
-              <h1 className="title">Last Game Rates</h1>
-              {lastBucksGame === "Last game yet to come" ? (
-                <p className="last-game-rates-msg">
-                  Our first game is yet to come!
-                </p>
-              ) : (
-                <>
-                  <div className="rate-title-container">
-                    <p>Name</p>
-                    <p>Date</p>
-                    <p>Rating</p>
-                  </div>
-                  {filteredLastGamesRating.length ? (
-                    filteredLastGamesRating.map((rate, index) => (
-                      <div
-                        key={uuidv4()}
-                        className={
-                          "rate-container " +
-                          (index === filteredLastGamesRating.length - 1
-                            ? "last"
-                            : "")
-                        }
-                        onClick={(e) =>
-                          handleNavigateGameRates(e, rate.username, rate.gameID)
-                        }
-                      >
-                        <span className="rater-name">
-                          <AddFriend name={rate.username} className="normal" />
-                        </span>
-                        <p className="game-date">
-                          {formatGameDateString(rate.gameID.split("_")[0])}
-                        </p>
-                        <p
-                          className="rating-number"
-                          style={{
-                            boxShadow:
-                              "0 0 10px 2px " + getColorOfRating(rate.rating),
-                          }}
-                        >
-                          {rate.rating}
-                        </p>
-                      </div>
-                    ))
-                  ) : (
-                    <p className="last-game-rates-msg">No rates yet.</p>
-                  )}
-                </>
-              )}
-            </div>
-          ) : lastGamesRatingStatus === "error" ||
-            isGameRatesError ||
-            lastBucksGame === "Last game yet to come" ? (
-            <p className="fetching-error-msg">
-              Problem fetching game rates. <br /> Please try again later.
+        {/*
+          <div className="all-last-week-rates">
+            <h1 className="game-rates-title">Game Rates</h1>
+            <p className="average-msg">
+              {averageLastGameRating &&
+                `Last game average rating: ${averageLastGameRating}.`}
             </p>
-          ) : (
-            <div className="loader6"></div>
-          )}
-        </div>
+            {filteredLastGamesRating ? (
+              <div className="last-game-rates">
+                <h1 className="title">Last Game Rates</h1>
+                {lastBucksGame === "Last game yet to come" ? (
+                  <p className="last-game-rates-msg">
+                    Our first game is yet to come!
+                  </p>
+                ) : (
+                  <>
+                    <div className="rate-title-container">
+                      <p>Name</p>
+                      <p>Date</p>
+                      <p>Rating</p>
+                    </div>
+                    {filteredLastGamesRating.length ? (
+                      filteredLastGamesRating.map((rate, index) => (
+                        <div
+                          key={uuidv4()}
+                          className={
+                            "rate-container " +
+                            (index === filteredLastGamesRating.length - 1
+                              ? "last"
+                              : "")
+                          }
+                          onClick={(e) =>
+                            handleNavigateGameRates(
+                              e,
+                              rate.username,
+                              rate.gameID
+                            )
+                          }
+                        >
+                          <span className="rater-name">
+                            <AddFriend
+                              name={rate.username}
+                              className="normal"
+                            />
+                          </span>
+                          <p className="game-date">
+                            {formatGameDateString(rate.gameID.split("_")[0])}
+                          </p>
+                          <p
+                            className="rating-number"
+                            style={{
+                              boxShadow:
+                                "0 0 10px 2px " + getColorOfRating(rate.rating),
+                            }}
+                          >
+                            {rate.rating}
+                          </p>
+                        </div>
+                      ))
+                    ) : (
+                      <p className="last-game-rates-msg">No rates yet.</p>
+                    )}
+                  </>
+                )}
+              </div>
+            ) : lastGamesRatingStatus === "error" ||
+              isGameRatesError ||
+              lastBucksGame === "Last game yet to come" ? (
+              <p className="fetching-error-msg">
+                Problem fetching game rates. <br /> Please try again later.
+              </p>
+            ) : (
+              <div className="loader6"></div>
+            )}
+          </div>
+          */}
 
         <div className="recent-fanposts-container">
           <h1>Recent Fanposts</h1>
@@ -552,36 +569,38 @@ function Home({
             />
           </div>
         )}
+        <img src={giannisImg} alt="Gianis pic" />
       </div>
       <div className="home-wrapper2">
-        <div className="articles-container">
-          <h1 className="title">More Articles</h1>
-          {articles ? (
-            <>
-              {articles.map((article, index) => {
-                if (index < window.innerHeight / 150)
-                  return (
-                    <div key={uuidv4()} className="link-container">
-                      <a className="link" href={article.url} target="_blank">
-                        {article.title}
-                      </a>
-                      <em className="source">{article.source}</em>
-                    </div>
-                  )
-              })}
-              <hr />
-              <a
-                className="all-articles-link"
-                onClick={() => navigate("/AllArticles")}
-              >
-                Browse all articles
-              </a>
-            </>
-          ) : (
-            <div class="loader2 add-margin"></div>
-          )}
-        </div>
-        <img src={giannisImg} alt="Gianis pic" />
+        {/*
+          <div className="articles-container">
+            <h1 className="title">More Articles</h1>
+            {articles ? (
+              <>
+                {articles.map((article, index) => {
+                  if (index < window.innerHeight / 150)
+                    return (
+                      <div key={uuidv4()} className="link-container">
+                        <a className="link" href={article.url} target="_blank">
+                          {article.title}
+                        </a>
+                        <em className="source">{article.source}</em>
+                      </div>
+                    )
+                })}
+                <hr />
+                <a
+                  className="all-articles-link"
+                  onClick={() => navigate("/AllArticles")}
+                >
+                  Browse all articles
+                </a>
+              </>
+            ) : (
+              <div class="loader2 add-margin"></div>
+            )}
+          </div>
+          */}
       </div>
       <div className="home-wrapper3">
         <div className="all-youtube-container">

@@ -128,10 +128,6 @@ const dbApiUrl = process.env.REACT_APP_API_URL
 
 //
 
-/*
-  TODO: test on netlify without saving requests
-*/
-
 function App() {
   const [userName, setuserName] = useState(() => {
     const storedUserName = localStorage.getItem("userName")
