@@ -301,8 +301,6 @@ function App() {
   const [isGameRatesError, setisGameRatesError] = useState(false)
 
   useEffect(() => {
-    return // temp to save requests
-
     if (isScheduleError) {
       setLastBucksGame("error") // for display msg
       setisGameRatesError(true)
