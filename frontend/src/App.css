@@ -468,8 +468,9 @@ svg {
 .page-description {
   position: absolute;
   left: 1vw;
-  top: 3vh;
+  top: 2vh;
   font-family: Arial, Helvetica, sans-serif;
+  max-width: 65vw;
 }
 
 .loader8 {

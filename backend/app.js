@@ -84,6 +84,11 @@ server.listen(PORT, () => {
 
 // routes
 
+// health route
+app.get("/health", (req, res) => {
+  res.status(200).send("server is running")
+})
+
 // log in validation
 app.post("/login", async (req, res) => {
   const { usernameOrEmail, password } = req.body
