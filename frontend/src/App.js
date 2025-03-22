@@ -361,8 +361,6 @@ function App() {
 
     // get the game box score if its valid:
     if (nextGame) {
-      console.log()
-
       const boxScore = nextGame
       setNextBucksGame(boxScore)
     } else setNextBucksGame("no games left")
