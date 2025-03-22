@@ -419,8 +419,6 @@ function App() {
 
     // schedule:
     async function getScheduleData() {
-      console.log("fetching schedule")
-
       try {
         const res = await axios.request(scheduleOptions)
 
@@ -453,19 +451,11 @@ function App() {
     const today = new Date().toLocaleDateString() // get the date
     const lastRun = localStorage.getItem("lastRunDate")
 
-    console.log(today, lastRun)
-
-    console.log(lastRun !== today, !lastRun)
-
     // last run was not today or its the first run
     if (lastRun !== today || !lastRun) {
       // this runs max once between midnights
 
-      console.log("hi")
-
       const isBetweenOct15toJune = isDateBetweenOct15ToJune()
-
-      console.log(isBetweenOct15toJune)
 
       localStorage.removeItem("lastBucksGame")
       setLastBucksGame(null)
