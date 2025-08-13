@@ -15,7 +15,7 @@ A Milwaukee Bucks fan page app where fans can connect, share content, engage in 
 - **User-Generated Basketball Opinions**: Users have multiple ways to share and post their opinions on basketball, including game predictions, ratings, and commentary.
 
 ## Try it yourself
-The project is deployed and hosted on [Vercel](https://vercel.com/). You can try it yourself [on this link](your-demo-link-here) (recommended)  
+The project is deployed and hosted on [Vercel](https://vercel.com/). You can try it yourself [on this link](https://bucks-fan-page.vercel.app/) (recommended)  
 or install and run it locally:
 ## Installation
 

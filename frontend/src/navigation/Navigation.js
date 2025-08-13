@@ -598,7 +598,7 @@ function Navigation({ setpassword, setemail }) {
       {isHomePage && (
         <div className="left-pop-ups">
           <div>
-            {/*
+            {
               <div
                 className="tree bucks"
                 ref={bucksConRef}
@@ -612,7 +612,7 @@ function Navigation({ setpassword, setemail }) {
                 Bucks
                 <IoMdArrowDropright />
               </div>
-              */}
+            }
             <div
               className="bucks-container pop-up-container invisible"
               onMouseLeave={(e) =>

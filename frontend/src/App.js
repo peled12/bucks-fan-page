@@ -17,10 +17,6 @@ import getCurrentDate from "./functions/getCurrentDate"
 
 import { IoMdClose } from "react-icons/io"
 
-/*
-  TODO: commit without saving requests
-*/
-
 const Home = lazy(() => import("./pages/Home"))
 const Navigation = lazy(() => import("./navigation/Navigation"))
 const SignIn = lazy(() => import("./pages/registration/SignIn"))
@@ -305,8 +301,6 @@ function App() {
   const [isGameRatesError, setisGameRatesError] = useState(false)
 
   useEffect(() => {
-    return // temp to save requests
-
     if (isScheduleError) {
       setLastBucksGame("error") // for display msg
       setisGameRatesError(true)
@@ -455,38 +449,38 @@ function App() {
     const today = new Date().toLocaleDateString() // get the date
     const lastRun = localStorage.getItem("lastRunDate")
 
-    // temp; this is to save requests
-    // if (lastRun !== today) {
-    //   // this runs max once between midnights
+    // last run was not today or its the first run
+    if (lastRun !== today || !lastRun) {
+      // this runs max once between midnights
 
-    //   const isBetweenOct15toJune = isDateBetweenOct15ToJune()
+      const isBetweenOct15toJune = isDateBetweenOct15ToJune()
 
-    //   localStorage.removeItem("lastBucksGame")
-    //   setLastBucksGame(null)
-    //   // lastBucksGame will fetch when schedule changes
+      localStorage.removeItem("lastBucksGame")
+      setLastBucksGame(null)
+      // lastBucksGame will fetch when schedule changes
 
-    //   localStorage.removeItem("schedule")
-    //   setschedule([])
-    //   if (isBetweenOct15toJune) getScheduleData() // fetch
+      localStorage.removeItem("schedule")
+      setschedule([])
+      if (isBetweenOct15toJune) getScheduleData() // fetch
 
-    // localStorage.removeItem("articles")
-    // setarticles(null)
-    // fetchArticlesData()
+      localStorage.removeItem("articles")
+      setarticles(null)
+      fetchArticlesData()
 
-    //   localStorage.removeItem("teams")
-    //   setteams([])
-    //   if (isBetweenOct15toJune) fetchTeamsData() // fetch
+      localStorage.removeItem("teams")
+      setteams([])
+      if (isBetweenOct15toJune) fetchTeamsData() // fetch
 
-    //   localStorage.removeItem("yesterGames")
-    //   setyesterdayGames(null)
-    //   fetchYesterdaysGamesData() // fetch
+      localStorage.removeItem("yesterGames")
+      setyesterdayGames(null)
+      fetchYesterdaysGamesData() // fetch
 
-    //   localStorage.removeItem("tomorGames")
-    //   settomorrowGames(null)
+      localStorage.removeItem("tomorGames")
+      settomorrowGames(null)
 
-    //   // no need to fetch tomorrowGames because tomorrowGames fetches after user input
-    //   localStorage.setItem("lastRunDate", today) // update last run date to today
-    // }
+      // no need to fetch tomorrowGames because tomorrowGames fetches after user input
+      localStorage.setItem("lastRunDate", today) // update last run date to today
+    }
 
     async function fetchYesterdaysGamesData() {
       try {
