@@ -308,9 +308,7 @@ function Home({
     <>
       <h1 className="page-title">Home page</h1>
       <p className="page-description">
-        NOTE: Any third-party API like game previews & recaps, Bucks' roster,
-        schedule, daily schedule and more are not available <b>yet</b> duo to a
-        maximum request amount.
+        NOTE: NBA data is unavalable during the offseason
       </p>
       <div className="loader4 home-loader"></div>
       {/*

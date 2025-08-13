@@ -349,7 +349,7 @@ function App() {
   useEffect(() => {
     if (isScheduleError) setNextBucksGame("error") // for display msg
 
-    if (!schedule) return // make sure schedule is fethced
+    if (!schedule.length) return // make sure schedule is fethced
 
     const currentDate = getCurrentDate()
 
@@ -508,17 +508,13 @@ function App() {
     }
 
     function isDateBetweenOct15ToJune() {
-      const now = new Date()
-      const currentYear = now.getFullYear()
+      const today = new Date()
+      const year = today.getFullYear()
 
-      const oct15 = new Date(currentYear, 9, 15)
-      const dec31 = new Date(currentYear, 11, 31)
-      const jan1 = new Date(currentYear + 1, 0, 1)
-      const apr30 = new Date(currentYear + 1, 5, 30)
+      const oct15 = new Date(year, 9, 15)
+      const jun30 = new Date(year, 5, 30)
 
-      // check if the current date is between October 15th and December 31st (current year)
-      // or between January 1st and April 30th (next year)
-      return (now >= oct15 && now <= dec31) || (now >= jan1 && now <= apr30)
+      return today >= oct15 || today <= jun30
     }
   }, [])
 
