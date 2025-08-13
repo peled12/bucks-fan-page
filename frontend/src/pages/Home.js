@@ -311,7 +311,7 @@ function Home({
         NOTE: NBA data is unavalable during the offseason
       </p>
       <div className="loader4 home-loader"></div>
-      <Games
+      {/*<Games
         date={date}
         handleSelectChange={handleSelectChange}
         teams={teams}
@@ -322,7 +322,7 @@ function Home({
         handleNavigateGamePreview={(gameID, gameDate, gameTime) =>
           navigate("/GamePreview/" + gameID + "/" + gameDate + "/" + gameTime)
         }
-      />
+      />*/}
       {isSignedIn &&
       lastGamesRating &&
       yesterdayGames &&
